@@ -48,9 +48,10 @@ Also you can use the following command if you want to find a specific vulnerabil
 python3 phpvuln.py -p /.../.../Desktop/bWAPP/ -v rfi
 ```
 Thus, you can use all the features of this tool one by one and benefit by finding significant vulnerabilities in php code.
-
+<br>
 
 <b> For the sqlmaps, we discuss on how php vuln works in the system using linux. Now we need to know how sqlmaps work</b>
+<br>
 
 Here are the commands from `Generic.py` to generate basic arguments for sqlmap and to get a general idea about the topic:
 ```python
@@ -72,8 +73,10 @@ Here are the commands from `Generic.py` to generate basic arguments for sqlmap a
 ```
 
 We are retrieving information from the sqlmaps:
+<br>
 
 <b>Retrieve Information</b>
+<br>
 
 <b>Internal</b>
 ```python
@@ -85,6 +88,8 @@ We are retrieving information from the sqlmaps:
 --privileges #Get privileges
 ```
 <b>First database data</b>
+<br>
+
 ```python
 --all #Retrieve everything
 --dump #Dump DBMS database table entries
