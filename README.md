@@ -1,6 +1,6 @@
 # phpvuln sqlmaps - finding vulnerabilities in php code
 
-Hi, I'm Carl Vincent Reyno, a security engineer at HackerOne. Today I'm going to discuss how to find vulnerabilities in PHP code and how sqlmap works.
+Hi, I'm Carl Vincent Reyno, a security engineer at HackerOne. I'm going to discuss how to find vulnerabilities in PHP code and how sqlmap works.
 
 So, According to the Zend (2023), A PHP vulnerability is an exploitable flaw in a PHP application that can be used to gain unauthorized access to systems that comprise or underlie that PHP application.
 
@@ -8,9 +8,11 @@ Here's the dependencies on how to execute this in python3 pre-installed in your 
 
 Let’s install it by using the following command:
 
-```apt install python3```
+```python
+apt install python3
+```
 
-<b> Installing the PHP 
+<b> Installing the PHP  </b>
 
 ```python
 git clone https://github.com/ecriminal/phpvuln.git
