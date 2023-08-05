@@ -49,7 +49,7 @@ python3 phpvuln.py -p /.../.../Desktop/bWAPP/ -v rfi
 ```
 Thus, you can use all the features of this tool one by one and benefit by finding significant vulnerabilities in php code.
 <br>
- For the sqlmaps, we discuss on how php vuln works in the system using linux. Now we need to know how sqlmaps work
+ For the sqlmaps, we discuss on how php vuln works in the system using linux. Now we need to know how sqlmaps works.
 <br>
 
 Here are the commands from `Generic.py` to generate basic arguments for sqlmap and to get a general idea about the topic:
