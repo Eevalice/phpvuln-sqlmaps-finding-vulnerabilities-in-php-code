@@ -1,6 +1,28 @@
-# sqlmaps - finding vulnerabilities in php code
+# sqlmaps and phpvuln - finding vulnerabilities in php code
 
-Hi, I'm Carl Vincent Reyno, a security engineer at HackerOne. Today I'm going to discuss how to find vulnerabilities in PHP code.
+Hi, I'm Carl Vincent Reyno, a security engineer at HackerOne. Today I'm going to discuss how to find vulnerabilities in PHP code and how sqlmap works.
+
+So, According to the Zend (2023), A PHP vulnerability is an exploitable flaw in a PHP application that can be used to gain unauthorized access to systems that comprise or underlie that PHP application and further explaining it, PHPvuln is an open source OWASP penetration testing tool developed in Python 3 that may help you detect typical PHP vulnerabilities in PHP code, such as command injection, local/remote file inclusion, and SQL injection.
+
+
+Here's the dependencies on how to execute this in python3 pre-installed in your computer. 
+
+Let’s install it by using the following command:
+
+```apt install python3```
+
+<b> Installing the PHP 
+
+```python
+git clone https://github.com/ecriminal/phpvuln.git
+cd phpvuln/
+python3 phpvuln.py -h
+```
+![image](https://github.com/Eevalice/sqlmap-infosec-writeup/assets/79138019/52765652-0208-45c7-b011-7cedf905312a)
+
+
+
+
 
 Here are the commands from `Generic.py` to generate basic arguments for sqlmap and to get a general idea about the topic:
 ```python
