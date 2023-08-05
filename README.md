@@ -20,13 +20,13 @@ cd phpvuln/
 python3 phpvuln.py -h
 ```
 
-<b> Getting the vulnerability list <b>
+<b> Getting the vulnerability list </b>
 Here you can see the list of many types of vulnerabilities that you can identify in php code with the help of this tool.
 ```python
 python3 phpvuln.py --list-vuln
 ```
 
-<b>Find Vulnerability</b>
+<b> Find Vulnerability </b>
 As you may have come to know about this tool why developers have created this tool. All we have to do is give the path of the php project that we want to investigate and it will identify all the vulnerability by itself.
 
 ```python
