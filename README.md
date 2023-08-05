@@ -4,9 +4,9 @@ Hi, I'm Carl Vincent Reyno, a security engineer at HackerOne. I'm going to discu
 
 So, According to the Zend (2023), A PHP vulnerability is an exploitable flaw in a PHP application that can be used to gain unauthorized access to systems that comprise or underlie that PHP application.
 
-Here's the dependencies on how to execute this in python3 pre-installed in your computer. 
+<b>Here's the dependencies on how to execute this in python3 pre-installed in your computer. 
 
-Let’s install it by using the following command:
+Let’s install it by using the following command: </b>
 
 ```python
 apt install python3
