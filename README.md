@@ -1,4 +1,4 @@
-# phpvuln sqlmaps - finding vulnerabilities in php code
+# phpvuln - sqlmaps - finding vulnerabilities in php code
 
 Hi, I'm Carl Vincent Reyno, a security engineer at HackerOne. I'm going to discuss how to find vulnerabilities in PHP code and how sqlmap works.
 
