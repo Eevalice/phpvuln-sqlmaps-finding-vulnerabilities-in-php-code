@@ -1,0 +1,15 @@
+-u "<URL>" 
+-p "<PARAM TO TEST>" 
+--user-agent=SQLMAP 
+--random-agent 
+--threads=10 
+--risk=3 #MAX
+--level=5 #MAX
+--dbms="<KNOWN DB TECH>" 
+--os="<OS>"
+--technique="UB" #Use only techniques UNION and BLIND in that order (default "BEUSTQ")
+--batch #Non interactive mode, usually Sqlmap will ask you questions, this accepts the default answers
+--auth-type="<AUTH>" #HTTP authentication type (Basic, Digest, NTLM or PKI)
+--auth-cred="<AUTH>" #HTTP authentication credentials (name:password)
+--proxy=http://127.0.0.1:8080
+--union-char "GsFRts2" #Help sqlmap identify union SQLi techniques with a weird union char
